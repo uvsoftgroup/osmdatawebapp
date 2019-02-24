@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"
+	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+	rel="stylesheet" media="screen" />
+<link rel="stylesheet" th:href="@{/css/style.css}" href="../../static/css/style.css" />
+</head>
+  <body>
+  <table id="footer">
+<tr>
+<td>
+<div class="row text-center">
+	<img width="7.5%" th:src="@{/images/template.png}"/>
+ </div>
+</td>
+<td><div th:fragment="footer"> &copy; 2018 uvsoftgroup </div>
+</td>
+</tr>
+     </table>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+.navbar-default {
+    background: #6db33f;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.formError {
+    color: red;
+    font-style: italic;
+}
+
+.error{
+    color: red;
+    font-size: 15px;
+}
+.user{
+    color: blue;
+    font-size: 15px;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+  
+} 
+
+table#userRole {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+
+table#footer th,tr,td {
+  border: 1px solid #f1f1c1;   
+  background-color: #f1f1c1;
+}
+
+table#userRegistartion th,tr,td {
+  width: 100%;  
+  border: 1px solid #fff;     
+  background-color: #eee;
+}
+
+table#userRegistartion th {
+  background-color: black;
+  color: white;
+}
+
+

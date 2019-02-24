@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<title>Open Street Road in Bangladesh</title>
+<th:block th:include="fragments/header2"></th:block>
+        
+</head>
+<body>
+<div class="container">
+ <form th:object="${osmBasicFeatureInputTO}" th:action="@{/osmrailways}" method="get"> 
+    <label for="osmName">Name:</label> 
+    <input type="text" name="osmName" id="osmName"/>
+    <!--  <input type="text" name="osmName" id="osmName" th:value="${osmBasicFeatureInputTO}"/> -->
+    <label for="osmType">Type:</label> 
+   <input type="text" name="osmType" id="osmType"/>
+    <label for="osmId">OSM Id:</label> 
+    <input type="text" name="osmId" id="osmId"/>
+     <label for="osmGId">Id:</label> 
+  <input type="text" name="osmGId" id="osmGId" />
+     <label for="searchLimit">Search Limit:</label> 
+  <input type="text" name="searchLimit" id="searchLimit"/>
+    <input type="submit" value="Search"/>
+		<div th:if="${not #lists.isEmpty(osmrailways)}">
+			<h2>Open Street Map Railways</h2>
+			<table id="userRegistartion">
+				<tr>
+				<th>Geometry</th>
+				<th>Name</th>
+				<th>Type</th>
+				<th>OSM Id</th>
+				<th>Id</th>
+				</tr>
+				<tr th:each="ur : ${osmrailways}">
+				     <td th:text="${ur.osmGeom}"></td>
+				     <td th:text="${ur.osmName}"></td>
+				     <td th:text="${ur.osmType}"></td>
+					<td th:text="${ur.osmId}"></td>
+					<td th:text="${ur.osmGId}"></td>
+				</tr>
+			</table>
+		</div>
+
+	<th:block th:include="fragments/footer"></th:block>
+		</form>
+		</div>
+</body>
+</html>
